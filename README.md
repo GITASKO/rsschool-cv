@@ -1,1 +1,1 @@
-# rsschool-cv
+https://GITASKO.github.io/rsschool-cv/cv
