@@ -29,6 +29,12 @@ ul {
     list-style: none;
 }
 
+@media (max-width: 768px) {
+    .section {
+      width: 100%;
+    }
+  }
+
 
 .container {
     max-width: 1440px;
@@ -47,11 +53,26 @@ ul {
     text-align: center;
 }
 
+.header__menu-item {
+    transition: background-size 0.8s;
+    text-decoration: none;
+    background-image: linear-gradient(#FFC905, #FFC905);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+}
+
+.header__menu-item:hover {
+    transition: 0.8s;
+    background-size: 100% 2px;
+}
+
 .header__container {
     display: flex;
     flex: wrap;
     background-color: #fff;
 }
+
 .header__photo {
     position: relative;
     display: flex;
@@ -61,7 +82,7 @@ ul {
 }
 
 .header__photo-main {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%; 
     height: 100%;
     overflow: hidden;
@@ -70,6 +91,7 @@ ul {
 }
 
 .header__content {
+    font-family: 'Allerta Stencil', sans-serif;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -80,18 +102,183 @@ ul {
 }
 
 .header__info-title {
-    font-family: 'Allerta Stencil', sans-serif;
     font-size: 55px;
 }
 
 .header__info-subtitle {
-    font-family: 'Allerta Stencil', sans-serif;
     margin-bottom: 50px;
-    text-transform: uppercase;
+    text-transform: lowercase;
+    margin-bottom: 100px;
 }
 
 .header__info-subtitle span {
     background-color: #FFC905;
     border-radius: 5px;
     padding: 5px;
+}
+
+.header__info-aboutmetitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.header__info-aboutmetitle::after {
+    content: "";
+    margin-top: 40px;
+    width: 60px;
+    border-bottom: 1rem solid #FFC905;
+    border-radius: 3px;
+}
+
+/* Quote header */
+/* .header__info-aboutmedescr-1 {
+    position: relative;
+    font-style: italic;
+    padding: 16px 24px;
+    margin: 16px 46px;   
+    font-size: 16px;
+    text-align: center;
+}
+.header__info-aboutmedescr-1:before,
+.header__info-aboutmedescr-1:after {
+    position: absolute;
+    color: #FFC905;
+    font-size: 100px;
+    font-family: Times, sans-serif;   
+    line-height: 100px;   
+}
+.header__info-aboutmedescr-1:before {
+    content: '“';
+    left: -30px;
+    top: -10px;
+}
+.header__info-aboutmedescr-1:after {
+    content: '”';
+    right: -30px;
+    bottom: -10px;
+} */
+
+
+/* .main__container {
+    margin-top: 70px;
+    display: grid;
+    grid-template-areas: "a a b b b b b"
+                         "c c b b b b b"
+                         "d d f f f f f"
+    
+}
+
+.grid-item-1 {
+    grid-area: a;
+    
+}
+
+.grid-item-2 {
+    grid-area: b;
+}
+
+.grid-item-3 {
+    grid-area: c;
+}
+
+.grid-item-4 {
+    grid-area: f;
+}
+
+.grid-item-5 {
+    grid-area: d;
+} */
+
+.main__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.main__container section {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: 2px solid #FFC905;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.main__header {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main__header::after {
+    content: "";
+    margin-top: 20px;
+    width: 100$;
+    border-bottom: 4px solid #FFC905;
+    border-radius: 2px;
+}
+
+.fefu {
+    max-width: 150px;;
+}
+
+.education__place {
+    opacity: 1;
+    transition: opacity .5s; 
+    margin-left: 100px;
+    position: relative;
+}
+
+.education__place:hover {
+    opacity: 0.5;
+}
+
+.place1::before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    width: 90px;
+    height: 90px;
+    background-image: url(/rsschool-cv/img/icons/logo_eng_1899.svg);
+    background-size: 100px 100px;
+}
+
+.place2::before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    width: 90px;
+    height: 90px;
+    background-image: url(/rsschool-cv/img/icons/logo-udemy.svg);
+    background-size: 90px 100px;
+}
+
+.place3::before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    width: 90px;
+    height: 90px;
+    background-image: url(/rsschool-cv/img/icons/logo-htmlacad.svg) ;
+    background-size: 90px 100px;
+}
+
+.education__title {
+    color: #FFC905;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.education__info {
+    text-transform: lowercase;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
