@@ -37,11 +37,6 @@ ul {
     list-style: none;
 }
 
-@media (max-width: 768px) {
-    .section {
-      width: 100%;
-    }
-  }
 
 /* HEADER */
 
@@ -90,9 +85,7 @@ ul {
 .header__photo {
     position: relative;
     display: flex;
-    margin-left: 10%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 20px;
 }
 
 .header__photo-main {
@@ -109,14 +102,16 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 50px;
+    padding-left: 30px;
     padding-top: 100px;
+    padding-bottom:20px;
     width: 100%;
     color: #22222E;
 }
 
 .header__info-title {
     font-size: 55px;
+    line-height: 50px;
 }
 
 .header__info-subtitle {
@@ -177,13 +172,14 @@ ul {
 
 /* MAIN */
 .main__container {
-    margin-top: 70px;
+    margin-top: 50px;
     display: grid;
-    grid-template-areas: "a a a b b b b b b"
-                         "c c c f f f f f f"
-                         "d d d f f f f f f"
-                         "d d d f f f f f f"
-    
+    grid-template-areas:
+        "a b"
+        "c f"
+        "d f";
+    gap: 10px;
+    grid-template-columns: 40% 1fr;
 }
 
 .grid-item-1 {
@@ -216,8 +212,8 @@ ul {
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding: 20px;
+    background-color:rgb(189, 187, 166, 0.1) ;
 }
 
 .main__header {
@@ -320,6 +316,13 @@ ul {
     background-size: 100% 2px;
 }
 
+.expirience__info {
+  line-height: 3.5rem;
+}
+
+/* SKILLS */
+
+
 .skills__list-item {
   position: relative;
   margin: 0;
@@ -414,7 +417,7 @@ ul {
     padding: 0;
   }
   
-  .carousel {
+  section .carousel {
     position: relative;
     padding-top: 75%;
     filter: drop-shadow(0 0 10px #0003);
@@ -691,3 +694,37 @@ ul {
     text-align: center;
   }
   
+  /* Adaptability */
+/* Tablet version */
+@media (max-width: 939px) {
+  .contact {
+    padding: 28px 0 35px;
+  }
+  .education {
+    padding: 35px 0;
+  }
+  .contact__list, 
+  .education__list {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .figure--right-side {
+    display: none;
+  }
+  .section-title {
+    margin-bottom: 26px;
+  }
+  .about-me,
+  .skills,
+  .key-strengths,
+  .code-example {
+    margin-bottom: 35px;
+  }
+  .about-me p,
+  .skills__list,
+  .code-example details,
+  .key-strengths__list,
+  .projects__list {
+    margin: 0 30px;
+  }
+}
